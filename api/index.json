@@ -1,10 +1,8 @@
 {
     "back": {
-        "id": "back",
-        "name": "Back",
-        "suit": "N/A",
-        "value": null,
-        "image": "./assets/images/back.svg"
+        "blue": {
+            "image": "./assets/images/back.svg"
+        }
     },
     "cards": [
         {
