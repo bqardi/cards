@@ -5,12 +5,26 @@ let cards = {
     deck: [],
     inPlay: [],
     discardPile: [],
-    shuffle(){
-        this.deck = this.list.reduce((newArr, current, i) => {
-            var rnd = i + (Math.floor( Math.random() * (newArr.length - i)));
-            [newArr[rnd], newArr[i]] = [current, newArr[rnd]];
-            return newArr;
-        }, [...this.list]);
+    reset(){
+        this.deck = this.list;
+        this.inPlay = [];
+        this.discardPile = [];
+    },
+    shuffleDeck(){
+        for (let i = this.deck.length - 1; i >= 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let tmp = this.deck[i];
+            this.deck[i] = this.deck[j];
+            this.deck[j] = tmp;
+        }
+    },
+    shuffleDiscardPile(){
+        for (let i = this.discardPile.length - 1; i >= 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let tmp = this.discardPile[i];
+            this.discardPile[i] = this.discardPile[j];
+            this.discardPile[j] = tmp;
+        }
     },
     draw(){
         let drawn = this.deck.shift();
@@ -40,7 +54,7 @@ function getCards(callback){
         .then(data => {
             cards.back = data.back;
             cards.list = data.cards;
-            cards.deck = data.cards;
+            this.reset();
             callback(cards);
         });
 }
