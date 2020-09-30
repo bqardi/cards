@@ -1,7 +1,7 @@
 {
     "back": {
         "blue": {
-            "image": "./assets/images/back.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/back.svg"
         }
     },
     "cards": [
@@ -10,91 +10,91 @@
             "name": "Ace of Spades",
             "suit": "Spades",
             "value": 1,
-            "image": "./assets/images/sa.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/sa.svg"
         },
         {
             "id": "s2",
             "name": "Two of Spades",
             "suit": "Spades",
             "value": 2,
-            "image": "./assets/images/s2.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s2.svg"
         },
         {
             "id": "s3",
             "name": "Three of Spades",
             "suit": "Spades",
             "value": 3,
-            "image": "./assets/images/s3.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s3.svg"
         },
         {
             "id": "s4",
             "name": "Four of Spades",
             "suit": "Spades",
             "value": 4,
-            "image": "./assets/images/s4.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s4.svg"
         },
         {
             "id": "s5",
             "name": "Five of Spades",
             "suit": "Spades",
             "value": 5,
-            "image": "./assets/images/s5.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s5.svg"
         },
         {
             "id": "s6",
             "name": "Six of Spades",
             "suit": "Spades",
             "value": 6,
-            "image": "./assets/images/s6.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s6.svg"
         },
         {
             "id": "s7",
             "name": "Seven of Spades",
             "suit": "Spades",
             "value": 7,
-            "image": "./assets/images/s7.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s7.svg"
         },
         {
             "id": "s8",
             "name": "Eight of Spades",
             "suit": "Spades",
             "value": 8,
-            "image": "./assets/images/s8.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s8.svg"
         },
         {
             "id": "s9",
             "name": "Nine of Spades",
             "suit": "Spades",
             "value": 9,
-            "image": "./assets/images/s9.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s9.svg"
         },
         {
             "id": "s10",
             "name": "Ten of Spades",
             "suit": "Spades",
             "value": 10,
-            "image": "./assets/images/s10.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/s10.svg"
         },
         {
             "id": "sj",
             "name": "Jack of Spades",
             "suit": "Spades",
             "value": 11,
-            "image": "./assets/images/sj.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/sj.svg"
         },
         {
             "id": "sq",
             "name": "Queen of Spades",
             "suit": "Spades",
             "value": 12,
-            "image": "./assets/images/sq.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/sq.svg"
         },
         {
             "id": "sk",
             "name": "King of Spades",
             "suit": "Spades",
             "value": 13,
-            "image": "./assets/images/sk.svg"
+            "image": "https://bqardi.github.io/cards/assets/images/sk.svg"
         }
     ]
 }
