@@ -6,6 +6,110 @@
     },
     "cards": [
         {
+            "id": "ha",
+            "name": "Ace of Hearts",
+            "suit": "hearts",
+            "value": 1,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/ha.svg"
+        },
+        {
+            "id": "h2",
+            "name": "Two of Hearts",
+            "suit": "hearts",
+            "value": 2,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h2.svg"
+        },
+        {
+            "id": "h3",
+            "name": "Three of Hearts",
+            "suit": "hearts",
+            "value": 3,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h3.svg"
+        },
+        {
+            "id": "h4",
+            "name": "Four of Hearts",
+            "suit": "hearts",
+            "value": 4,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h4.svg"
+        },
+        {
+            "id": "h5",
+            "name": "Five of Hearts",
+            "suit": "hearts",
+            "value": 5,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h5.svg"
+        },
+        {
+            "id": "h6",
+            "name": "Six of Hearts",
+            "suit": "hearts",
+            "value": 6,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h6.svg"
+        },
+        {
+            "id": "h7",
+            "name": "Seven of Hearts",
+            "suit": "hearts",
+            "value": 7,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h7.svg"
+        },
+        {
+            "id": "h8",
+            "name": "Eight of Hearts",
+            "suit": "hearts",
+            "value": 8,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h8.svg"
+        },
+        {
+            "id": "h9",
+            "name": "Nine of Hearts",
+            "suit": "hearts",
+            "value": 9,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h9.svg"
+        },
+        {
+            "id": "h10",
+            "name": "Ten of Hearts",
+            "suit": "hearts",
+            "value": 10,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/h10.svg"
+        },
+        {
+            "id": "hj",
+            "name": "Jack of Hearts",
+            "suit": "hearts",
+            "value": 11,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/hj.svg"
+        },
+        {
+            "id": "hq",
+            "name": "Queen of Hearts",
+            "suit": "hearts",
+            "value": 12,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/hq.svg"
+        },
+        {
+            "id": "hk",
+            "name": "King of Hearts",
+            "suit": "hearts",
+            "value": 13,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/hk.svg"
+        },
+        {
             "id": "sa",
             "name": "Ace of Spades",
             "suit": "spades",
@@ -108,6 +212,214 @@
             "value": 13,
             "color": "black",
             "image": "https://bqardi.github.io/cards/assets/images/sk.svg"
+        },
+        {
+            "id": "da",
+            "name": "Ace of Diamonds",
+            "suit": "diamonds",
+            "value": 1,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/da.svg"
+        },
+        {
+            "id": "d2",
+            "name": "Two of Diamonds",
+            "suit": "diamonds",
+            "value": 2,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d2.svg"
+        },
+        {
+            "id": "d3",
+            "name": "Three of Diamonds",
+            "suit": "diamonds",
+            "value": 3,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d3.svg"
+        },
+        {
+            "id": "d4",
+            "name": "Four of Diamonds",
+            "suit": "diamonds",
+            "value": 4,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d4.svg"
+        },
+        {
+            "id": "d5",
+            "name": "Five of Diamonds",
+            "suit": "diamonds",
+            "value": 5,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d5.svg"
+        },
+        {
+            "id": "d6",
+            "name": "Six of Diamonds",
+            "suit": "diamonds",
+            "value": 6,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d6.svg"
+        },
+        {
+            "id": "d7",
+            "name": "Seven of Diamonds",
+            "suit": "diamonds",
+            "value": 7,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d7.svg"
+        },
+        {
+            "id": "d8",
+            "name": "Eight of Diamonds",
+            "suit": "diamonds",
+            "value": 8,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d8.svg"
+        },
+        {
+            "id": "d9",
+            "name": "Nine of Diamonds",
+            "suit": "diamonds",
+            "value": 9,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d9.svg"
+        },
+        {
+            "id": "d10",
+            "name": "Ten of Diamonds",
+            "suit": "diamonds",
+            "value": 10,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/d10.svg"
+        },
+        {
+            "id": "dj",
+            "name": "Jack of Diamonds",
+            "suit": "diamonds",
+            "value": 11,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/dj.svg"
+        },
+        {
+            "id": "dq",
+            "name": "Queen of Diamonds",
+            "suit": "diamonds",
+            "value": 12,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/dq.svg"
+        },
+        {
+            "id": "dk",
+            "name": "King of Diamonds",
+            "suit": "diamonds",
+            "value": 13,
+            "color": "red",
+            "image": "https://bqardi.github.io/cards/assets/images/dk.svg"
+        },
+        {
+            "id": "ca",
+            "name": "Ace of Clubs",
+            "suit": "clubs",
+            "value": 1,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/ca.svg"
+        },
+        {
+            "id": "c2",
+            "name": "Two of Clubs",
+            "suit": "clubs",
+            "value": 2,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c2.svg"
+        },
+        {
+            "id": "c3",
+            "name": "Three of Clubs",
+            "suit": "clubs",
+            "value": 3,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c3.svg"
+        },
+        {
+            "id": "c4",
+            "name": "Four of Clubs",
+            "suit": "clubs",
+            "value": 4,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c4.svg"
+        },
+        {
+            "id": "c5",
+            "name": "Five of Clubs",
+            "suit": "clubs",
+            "value": 5,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c5.svg"
+        },
+        {
+            "id": "c6",
+            "name": "Six of Clubs",
+            "suit": "clubs",
+            "value": 6,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c6.svg"
+        },
+        {
+            "id": "c7",
+            "name": "Seven of Clubs",
+            "suit": "clubs",
+            "value": 7,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c7.svg"
+        },
+        {
+            "id": "c8",
+            "name": "Eight of Clubs",
+            "suit": "clubs",
+            "value": 8,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c8.svg"
+        },
+        {
+            "id": "c9",
+            "name": "Nine of Clubs",
+            "suit": "clubs",
+            "value": 9,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c9.svg"
+        },
+        {
+            "id": "c10",
+            "name": "Ten of Clubs",
+            "suit": "clubs",
+            "value": 10,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/c10.svg"
+        },
+        {
+            "id": "cj",
+            "name": "Jack of Clubs",
+            "suit": "clubs",
+            "value": 11,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/cj.svg"
+        },
+        {
+            "id": "cq",
+            "name": "Queen of Clubs",
+            "suit": "clubs",
+            "value": 12,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/cq.svg"
+        },
+        {
+            "id": "ck",
+            "name": "King of Clubs",
+            "suit": "clubs",
+            "value": 13,
+            "color": "black",
+            "image": "https://bqardi.github.io/cards/assets/images/ck.svg"
         }
     ]
 }
