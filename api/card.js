@@ -45,6 +45,9 @@ let cards = {
             }
         }
         this.discardPile.push(this.inPlay.shift());
+    },
+    find(id){
+        return this.list.find(card => card.id === id);
     }
 }
 
