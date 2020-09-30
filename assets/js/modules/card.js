@@ -1,4 +1,8 @@
 let cards = {
+    getCards(){
+        // return fetch("https://bqardi.github.io/cards/assets/api/index.json").then(res => res.json());
+        return fetch("/cards/assets/api/index.json").then(res => res.json());
+    },
     createCard(imgSrc){
         let card = document.createElement("DIV");
         card.classList.add("card");
