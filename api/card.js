@@ -1,9 +1,7 @@
 let cards = {
     getCards(callback){
-        fetch("https://bqardi.github.io/cards/api/index.json").then(res => {
-                console.log(res);    
-                return res.json();
-            })
+        fetch("https://bqardi.github.io/cards/api/index.json")
+            .then(res => res.json())
             .then(callback);
     },
     createCard(imgSrc){
