@@ -6,7 +6,7 @@ let cards = {
     inPlay: [],
     discardPile: [],
     reset(){
-        this.deck = this.list;
+        this.deck = [...this.list];
         this.inPlay = [];
         this.discardPile = [];
     },
