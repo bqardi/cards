@@ -1,41 +1,48 @@
 let cards = {
     back: null,
+    deckDiscard: false,
     list: [],
-    shuffled: [],
+    deck: [],
+    inPlay: [],
+    discardPile: [],
     shuffle(){
-        if (!this.back) {
-            return;
-        }
-        this.shuffled = this.list.reduce((newArr, current, i) => {
+        this.deck = this.list.reduce((newArr, current, i) => {
             var rnd = i + (Math.floor( Math.random() * (newArr.length - i)));
             [newArr[rnd], newArr[i]] = [current, newArr[rnd]];
             return newArr;
         }, [...this.list]);
     },
-    shuffleOldWay(){
-        if (!this.back) {
-            return;
+    draw(){
+        let drawn = this.deck.shift();
+        this.inPlay.push(drawn);
+        return drawn;
+    },
+    discard(card){
+        if (!this.inPlay.includes(card)) {
+            if (this.deckDiscard) {
+                if (!this.deck.includes(card)) {
+                    console.error(`${card.name} is ALREADY discarded!`);
+                    return;
+                }
+                this.discardPile.push(this.deck.shift());
+            } else {
+                console.error(`${card.name} is NOT in play!`);
+                return;
+            }
         }
-        for (let i = this.list.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let temp = this.list[i];
-            this.list[i] = this.list[j];
-            this.list[j] = temp;
-        }
+        this.discardPile.push(this.inPlay.shift());
     }
 }
 
-function initializeCards(shuffle, callback){
+function getCards(callback){
     fetch("https://bqardi.github.io/cards/api/index.json")
         .then(res => res.json())
         .then(data => {
             cards.back = data.back;
             cards.list = data.cards;
-            if (shuffle) {
-                cards.shuffle();
-            }
+            cards.deck = data.cards;
             callback(cards);
         });
 }
 
-export default initializeCards;
+export default getCards;
