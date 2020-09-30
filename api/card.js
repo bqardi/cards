@@ -54,7 +54,7 @@ function getCards(callback){
         .then(data => {
             cards.back = data.back;
             cards.list = data.cards;
-            this.reset();
+            cards.reset();
             callback(cards);
         });
 }
