@@ -1,15 +1,13 @@
 # Cards API
 A simple API for playing cards, stored in a JSON file.
 
----
-
 Fetch the JSON data (cards object) from [https://bqardi.github.io/cards/api/](https://bqardi.github.io/cards/api/):
 ```JavaScript
 fetch("https://bqardi.github.io/cards/api/")
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-  });
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    });
 ```
 
 # OR use the API:
