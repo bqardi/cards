@@ -1,4 +1,4 @@
-@import "./components/card.css";
+@import "../../api/card.css";
 
 body {
     font-family: "Roboto", sans-serif;
