@@ -1,5 +1,5 @@
 import getData from "./modules/fetch.js";
-import cards from "./modules/card.js";
+import cards from "../../api/card.js";
 
 getData("./api/index.json").then(onLoadData);
 
