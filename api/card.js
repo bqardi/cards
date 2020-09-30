@@ -1,51 +1,41 @@
 let cards = {
     back: null,
     list: [],
-    initialize(callback){
-        fetch("https://bqardi.github.io/cards/api/index.json")
-            .then(res => res.json())
-            .then(data => {
-                this.back = data.back;
-                this.list = data.cards;
-                callback();
-            });
-    },
-    create(imgSrc){
+    shuffled: [],
+    shuffle(){
         if (!this.back) {
             return;
         }
-        let card = document.createElement("DIV");
-        card.classList.add("card");
-        
-        let img = document.createElement("IMG");
-        img.src = imgSrc;
-        img.classList.add("card__image");
-
-        card.appendChild(img);
-
-        return card;
-    },
-    shuffle(array){
-        if (!this.back) {
-            return;
-        }
-        return array.reduce((newArr, current, i) => {
+        this.shuffled = this.list.reduce((newArr, current, i) => {
             var rnd = i + (Math.floor( Math.random() * (newArr.length - i)));
             [newArr[rnd], newArr[i]] = [current, newArr[rnd]];
             return newArr;
-        }, [...array]);
+        }, [...this.list]);
     },
-    shuffleOldWay(array){
+    shuffleOldWay(){
         if (!this.back) {
             return;
         }
-        for (let i = array.length - 1; i > 0; i--) {
+        for (let i = this.list.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
-            let temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+            let temp = this.list[i];
+            this.list[i] = this.list[j];
+            this.list[j] = temp;
         }
     }
 }
 
-export default cards;
+function initializeCards(shuffle, callback){
+    fetch("https://bqardi.github.io/cards/api/index.json")
+        .then(res => res.json())
+        .then(data => {
+            cards.back = data.back;
+            cards.list = data.cards;
+            if (shuffle) {
+                cards.shuffle();
+            }
+            callback(cards);
+        });
+}
+
+export default initializeCards;
