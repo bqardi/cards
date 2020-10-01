@@ -4,11 +4,19 @@ let cards = {
     list: [],
     deck: [],
     inPlay: [],
-    discardPile: [],
+    discarded: [],
     reset(){
         this.deck = [...this.list];
         this.inPlay = [];
-        this.discardPile = [];
+        this.discarded = [];
+    },
+    inPlayToDeck(){
+        this.deck = [...this.inPlay];
+        this.inPlay = [];
+    },
+    discardedToDeck(){
+        this.deck = [...this.inPlay];
+        this.inPlay = [];
     },
     shuffleDeck(){
         for (let i = this.deck.length - 1; i >= 0; i--) {
@@ -19,11 +27,11 @@ let cards = {
         }
     },
     shuffleDiscardPile(){
-        for (let i = this.discardPile.length - 1; i >= 0; i--) {
+        for (let i = this.discarded.length - 1; i >= 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
-            let tmp = this.discardPile[i];
-            this.discardPile[i] = this.discardPile[j];
-            this.discardPile[j] = tmp;
+            let tmp = this.discarded[i];
+            this.discarded[i] = this.discarded[j];
+            this.discarded[j] = tmp;
         }
     },
     draw(){
@@ -35,18 +43,18 @@ let cards = {
         if (!this.inPlay.includes(card)) {
             if (this.deckDiscard) {
                 if (!this.deck.includes(card)) {
-                    console.error(`${card.name} is ALREADY discarded!`);
+                    console.error(`${card.name} has ALREADY been discarded!`);
                     return;
                 }
                 let index = this.deck.indexOf(card);
-                this.discardPile.push(this.deck.splice(index, 1));
+                this.discarded.push(this.deck.splice(index, 1));
             } else {
                 console.error(`${card.name} is NOT in play!`);
                 return;
             }
         }
         let index = this.inPlay.indexOf(card);
-        this.discardPile.push(this.inPlay.splice(index, 1));
+        this.discarded.push(this.inPlay.splice(index, 1));
     },
     findCard(id){
         return this.list.find(card => card.id === id);
