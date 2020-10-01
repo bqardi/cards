@@ -38,13 +38,15 @@ let cards = {
                     console.error(`${card.name} is ALREADY discarded!`);
                     return;
                 }
-                this.discardPile.push(this.deck.shift());
+                let index = this.deck.indexOf(card);
+                this.discardPile.push(this.deck.splice(index, 1));
             } else {
                 console.error(`${card.name} is NOT in play!`);
                 return;
             }
         }
-        this.discardPile.push(this.inPlay.shift());
+        let index = this.inPlay.indexOf(card);
+        this.discardPile.push(this.inPlay.splice(index, 1));
     },
     findCard(id){
         return this.list.find(card => card.id === id);
