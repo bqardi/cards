@@ -14,13 +14,73 @@ fetch("https://bqardi.github.io/cards/api/")
 
 ### Handling (JavaScript API)
 
-An API for handling the cards (shuffling, sorting, getting cards, etc.) can be imported like this:
+An API for handling the cards (shuffling, discarding, draw card, find card, etc.) can be imported like this:
 ```JavaScript
-import cards from "https://bqardi.github.io/cards/api/card.js";
+import getCards from "https://bqardi.github.io/cards/api/card.js";
 
-cards.getCards(data => {
-    console.log(data);
-});
+// Pass in true as the preload argument for preloading all images, when calling getCards(callback, preload)
+// (if no argument is passed in, the default is false, meaning the images are NOT preloaded).
+
+// To actually get the <img> call cardObj.getImage(id); where 'id' is the suit
+// and the value (for example: "ha", (h = suit (hearts) and a = ace)).
+
+let preload = true;
+
+getCards(data => {
+    var cardsObj = data;
+    console.log(cardsObj);
+}, preload);
+```
+
+#### List of card suits and value:
+
+##### Suits:
+- h = hearts
+- s = spades
+- d = diamonds
+- c = clubs
+
+##### Value:
+- 2 - 10 = their respective value
+- a = ace
+- j = jack
+- q = queen
+- k = king
+
+#### Methods:
+
+```JavaScript
+// The following methods are methods that only affects the cards object:
+
+// Resets the card object
+cardsObj.reset();
+
+// Moves all cards in play to the deck
+cardsObj.inPlayToDeck();
+
+// Moves all discarded cards to the deck
+cardsObj.discardedToDeck();
+
+// Shuffles the deck
+cardsObj.shuffleDeck();
+
+// Shuffles the discard pile
+cardsObj.shuffleDiscardPile();
+
+// Returns the first card in the deck and sends it into play (the inPlay array)
+cardsObj.draw();
+
+// Discards the card passed in as an argument
+// (sends it to the discard pile. NOTE! Must be the card object, NOT the card HTML element!)
+cardsObj.discard(card);
+
+// Finds and returns a card with a given id
+// (for example: cardsObj.findCard("dj"); // Finds the Jack of Diamonds)
+cardsObj.findCard(id);
+
+// This method is ONLY available if 'preload' is set to true!
+// Returns the <img> with the preloaded card image (if proper card 'id' is passed as an argument)
+cardsObj.getImage(id);
 ```
 
 ### OPTIONAL Styling:
