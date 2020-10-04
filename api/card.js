@@ -81,7 +81,7 @@ function getCards(callback, preloadImages = false){
 }
 
 function getImages(){
-    let images = this.list.map(loadImage);
+    let images = cards.list.map(loadImage);
     return Promise.all(images);
 }
 
