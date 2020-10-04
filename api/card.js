@@ -61,15 +61,37 @@ let cards = {
     }
 }
 
-function getCards(callback){
+function getCards(callback, preloadImages = false){
     fetch("https://bqardi.github.io/cards/api/index.json")
         .then(res => res.json())
         .then(data => {
             cards.back = data.back;
             cards.list = data.cards;
             cards.reset();
-            callback(cards);
+            if (preloadImages) {
+                getImages().then(function(images){
+                    cards.images = images;
+                    cards.getImage = (id) => this.images.find(obj => obj.id === id).image;
+                    callback(cards);
+                });
+            } else {
+                callback(cards);
+            }
         });
+}
+
+function getImages(){
+    let images = this.list.map(loadImage);
+    return Promise.all(images);
+}
+
+function loadImage(obj){
+    let img = new Image();
+    img.src = obj.image;
+    return {
+        id: obj.id,
+        image: img
+    };
 }
 
 export default getCards;
