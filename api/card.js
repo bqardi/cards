@@ -71,7 +71,7 @@ function getCards(callback, preloadImages = false){
             if (preloadImages) {
                 getImages().then(function(images){
                     cards.images = images;
-                    cards.getImage = (id) => this.images.find(obj => obj.id === id).image;
+                    cards.getImage = (id) => cards.images.find(obj => obj.id === id).image;
                     callback(cards);
                 });
             } else {
